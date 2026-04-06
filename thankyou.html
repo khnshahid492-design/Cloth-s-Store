@@ -115,6 +115,8 @@
             border-radius: 16px;
             padding: 20px;
             margin-bottom: 20px;
+            max-height: 300px;
+            overflow-y: auto;
         }
 
         .summary-item {
@@ -130,6 +132,12 @@
 
         .item-name {
             font-weight: 500;
+        }
+
+        .item-details {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 4px;
         }
 
         .item-price {
@@ -226,20 +234,8 @@
             }
         }
     </style>
-    <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NMN922RL');</script>
-<!-- End Google Tag Manager -->
 </head>
 <body>
-
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMN922RL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <div class="thankyou-container">
         <div class="thankyou-header">
             <i class="fas fa-check-circle"></i>
@@ -266,7 +262,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             
             <div class="shipping-info">
                 <h3><i class="fas fa-truck"></i> Shipping Information</h3>
-                <p id="shippingDetails">A confirmation email has been sent to your registered email address.<br>
+                <p>A confirmation email has been sent to your registered email address.<br>
                 Your order will be processed within 1-2 business days.<br>
                 Estimated delivery: 5-7 business days.</p>
             </div>
@@ -293,7 +289,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         // Display order details
         function displayOrderDetails() {
-            // Get cart data from sessionStorage
             const cartData = sessionStorage.getItem('checkoutCart');
             const totalAmount = sessionStorage.getItem('checkoutTotal');
             
@@ -313,7 +308,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     itemDiv.innerHTML = `
                         <div>
                             <div class="item-name">${item.name}</div>
-                            <div style="font-size: 0.85rem; color: #888;">Size: ${item.size} | Quantity: ${item.qty}</div>
+                            <div class="item-details">Size: ${item.size} | Quantity: ${item.qty}</div>
                         </div>
                         <div class="item-price">$${(item.price * item.qty).toFixed(2)}</div>
                     `;
@@ -321,14 +316,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     subtotal += item.price * item.qty;
                 });
                 
-                // Update total
-                const totalSpan = document.getElementById('orderTotal');
-                totalSpan.innerHTML = `
+                document.getElementById('orderTotal').innerHTML = `
                     <span>Total Amount</span>
                     <span>$${subtotal.toFixed(2)}</span>
                 `;
             } else {
-                // If no cart data (direct access), show sample or redirect
                 document.getElementById('orderItems').innerHTML = `
                     <div class="summary-item">
                         <span>No items found</span>
@@ -336,28 +328,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 `;
             }
-            
-            // Clear sessionStorage after displaying (optional)
-            // sessionStorage.removeItem('checkoutCart');
-            // sessionStorage.removeItem('checkoutTotal');
         }
         
-        // Auto-redirect to home if accessed directly without purchase
-        function checkValidAccess() {
-            const cartData = sessionStorage.getItem('checkoutCart');
-            if (!cartData) {
-                // If someone lands directly on thankyou.html without checkout, redirect after 5 seconds
-                setTimeout(() => {
-                    if (confirm('No recent purchase found. Would you like to go shopping?')) {
-                        window.location.href = 'index.html';
-                    }
-                }, 3000);
-            }
-        }
-        
-        // Run on page load
         displayOrderDetails();
-        checkValidAccess();
     </script>
 </body>
 </html>
