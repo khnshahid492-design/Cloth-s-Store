@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,7 @@
     <title>Elysian Threads | Minimalist Clothing</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Tag Manager -->
+        <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -16,7 +16,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
+      <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMN922RL"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -101,21 +101,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="container">
             <h2 class="section-title">Shop by Category</h2>
             <div class="category-grid">
-                <div class="category-card" data-cat="men">
+                <div class="category-card">
                     <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=600&fit=crop" alt="Men">
                     <div class="category-overlay">
                         <h3>Men</h3>
                         <a href="#men" class="category-link">View Collection →</a>
                     </div>
                 </div>
-                <div class="category-card" data-cat="women">
+                <div class="category-card">
                     <img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=500&h=600&fit=crop" alt="Women">
                     <div class="category-overlay">
                         <h3>Women</h3>
                         <a href="#women" class="category-link">View Collection →</a>
                     </div>
                 </div>
-                <div class="category-card" data-cat="kids">
+                <div class="category-card">
                     <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=500&h=600&fit=crop" alt="Kids">
                     <div class="category-overlay">
                         <h3>Kids</h3>
@@ -126,28 +126,195 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
     </section>
 
-    <!-- Product Sections -->
+    <!-- Men's Collection -->
     <div id="men"></div>
     <section class="products-section">
         <div class="container">
             <h2 class="section-title">Men's Collection</h2>
-            <div class="product-grid" id="menProducts"></div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-product-id="m1">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&h=500&fit=crop" class="product-img" alt="Classic Oxford Shirt" onclick="viewItem('m1')">
+                    <div class="product-info">
+                        <div class="product-title">Classic Oxford Shirt</div>
+                        <div class="product-price">$59</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('m1', 'Classic Oxford Shirt', 59, 'Men')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card" data-product-id="m2">
+                    <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=400&h=500&fit=crop" class="product-img" alt="Slim Fit Chinos" onclick="viewItem('m2')">
+                    <div class="product-info">
+                        <div class="product-title">Slim Fit Chinos</div>
+                        <div class="product-price">$79</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('m2', 'Slim Fit Chinos', 79, 'Men')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card" data-product-id="m3">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=500&fit=crop" class="product-img" alt="Wool Blend Blazer" onclick="viewItem('m3')">
+                    <div class="product-info">
+                        <div class="product-title">Wool Blend Blazer</div>
+                        <div class="product-price">$149</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('m3', 'Wool Blend Blazer', 149, 'Men')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card" data-product-id="m4">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=500&fit=crop" class="product-img" alt="Graphic Tee" onclick="viewItem('m4')">
+                    <div class="product-info">
+                        <div class="product-title">Graphic Tee</div>
+                        <div class="product-price">$29</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('m4', 'Graphic Tee', 29, 'Men')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card" data-product-id="m5">
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=500&fit=crop" class="product-img" alt="Hooded Sweatshirt" onclick="viewItem('m5')">
+                    <div class="product-info">
+                        <div class="product-title">Hooded Sweatshirt</div>
+                        <div class="product-price">$69</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('m5', 'Hooded Sweatshirt', 69, 'Men')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="product-card" data-product-id="m6">
+                    <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?w=400&h=500&fit=crop" class="product-img" alt="Denim Jacket" onclick="viewItem('m6')">
+                    <div class="product-info">
+                        <div class="product-title">Denim Jacket</div>
+                        <div class="product-price">$89</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('m6', 'Denim Jacket', 89, 'Men')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Women's Collection -->
     <div id="women"></div>
     <section class="products-section">
         <div class="container">
             <h2 class="section-title">Women's Collection</h2>
-            <div class="product-grid" id="womenProducts"></div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-product-id="w1">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=400&h=500&fit=crop" class="product-img" alt="Flowing Midi Dress" onclick="viewItem('w1')">
+                    <div class="product-info">
+                        <div class="product-title">Flowing Midi Dress</div>
+                        <div class="product-price">$89</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('w1', 'Flowing Midi Dress', 89, 'Women')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card" data-product-id="w2">
+                    <img src="https://images.unsplash.com/photo-1434389674359-503a6ba9f34b?w=400&h=500&fit=crop" class="product-img" alt="Cropped Cashmere Sweater" onclick="viewItem('w2')">
+                    <div class="product-info">
+                        <div class="product-title">Cropped Cashmere Sweater</div>
+                        <div class="product-price">$119</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('w2', 'Cropped Cashmere Sweater', 119, 'Women')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card" data-product-id="w3">
+                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=400&h=500&fit=crop" class="product-img" alt="High-Waist Trousers" onclick="viewItem('w3')">
+                    <div class="product-info">
+                        <div class="product-title">High-Waist Trousers</div>
+                        <div class="product-price">$74</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('w3', 'High-Waist Trousers', 74, 'Women')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card" data-product-id="w4">
+                    <img src="https://images.unsplash.com/photo-1564257631407-4deb1f99d992?w=400&h=500&fit=crop" class="product-img" alt="Silk Blouse" onclick="viewItem('w4')">
+                    <div class="product-info">
+                        <div class="product-title">Silk Blouse</div>
+                        <div class="product-price">$99</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('w4', 'Silk Blouse', 99, 'Women')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card" data-product-id="w5">
+                    <img src="https://images.unsplash.com/photo-1583496661160-f3b88c1b1c6a?w=400&h=500&fit=crop" class="product-img" alt="Leather Skirt" onclick="viewItem('w5')">
+                    <div class="product-info">
+                        <div class="product-title">Leather Skirt</div>
+                        <div class="product-price">$109</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('w5', 'Leather Skirt', 109, 'Women')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="product-card" data-product-id="w6">
+                    <img src="https://images.unsplash.com/photo-1544652478-6653e09f18a2?w=400&h=500&fit=crop" class="product-img" alt="Oversized Cardigan" onclick="viewItem('w6')">
+                    <div class="product-info">
+                        <div class="product-title">Oversized Cardigan</div>
+                        <div class="product-price">$84</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('w6', 'Oversized Cardigan', 84, 'Women')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
+    <!-- Kids' Collection -->
     <div id="kids"></div>
     <section class="products-section">
         <div class="container">
             <h2 class="section-title">Kids' Collection</h2>
-            <div class="product-grid" id="kidsProducts"></div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card" data-product-id="k1">
+                    <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=500&fit=crop" class="product-img" alt="Cotton Romper" onclick="viewItem('k1')">
+                    <div class="product-info">
+                        <div class="product-title">Cotton Romper</div>
+                        <div class="product-price">$34</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('k1', 'Cotton Romper', 34, 'Kids')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card" data-product-id="k2">
+                    <img src="https://images.unsplash.com/photo-1622290291468-a28a7a7dcf7f?w=400&h=500&fit=crop" class="product-img" alt="Denim Overalls" onclick="viewItem('k2')">
+                    <div class="product-info">
+                        <div class="product-title">Denim Overalls</div>
+                        <div class="product-price">$44</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('k2', 'Denim Overalls', 44, 'Kids')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card" data-product-id="k3">
+                    <img src="https://images.unsplash.com/photo-1604644401890-0bd678c83788?w=400&h=500&fit=crop" class="product-img" alt="Graphic Hoodie" onclick="viewItem('k3')">
+                    <div class="product-info">
+                        <div class="product-title">Graphic Hoodie</div>
+                        <div class="product-price">$39</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('k3', 'Graphic Hoodie', 39, 'Kids')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card" data-product-id="k4">
+                    <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=400&h=500&fit=crop" class="product-img" alt="Plaid Shirt" onclick="viewItem('k4')">
+                    <div class="product-info">
+                        <div class="product-title">Plaid Shirt</div>
+                        <div class="product-price">$36</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('k4', 'Plaid Shirt', 36, 'Kids')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card" data-product-id="k5">
+                    <img src="https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=400&h=500&fit=crop" class="product-img" alt="Leggings Set" onclick="viewItem('k5')">
+                    <div class="product-info">
+                        <div class="product-title">Leggings Set</div>
+                        <div class="product-price">$42</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('k5', 'Leggings Set', 42, 'Kids')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="product-card" data-product-id="k6">
+                    <img src="https://images.unsplash.com/photo-1601042879364-f3947d3f9c16?w=400&h=500&fit=crop" class="product-img" alt="Puffer Vest" onclick="viewItem('k6')">
+                    <div class="product-info">
+                        <div class="product-title">Puffer Vest</div>
+                        <div class="product-price">$49</div>
+                        <button class="add-to-cart-btn" onclick="addToCart('k6', 'Puffer Vest', 49, 'Kids')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -155,7 +322,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="reviews">
         <div class="container">
             <h2 class="section-title">Customer Reviews</h2>
-            <div class="reviews-grid" id="reviewsContainer"></div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Amazing quality and fast shipping! The fabric is so soft and comfortable."</p>
+                    <div class="review-name">— Sarah J.</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"The minimalist aesthetic is perfect. My new favorite brand!"</p>
+                    <div class="review-name">— David L.</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <p class="review-text">"Loved the kids collection, super soft and durable for active toddlers."</p>
+                    <div class="review-name">— Mia Chen</div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="review-text">"Excellent customer service and the clothes fit perfectly."</p>
+                    <div class="review-name">— James Wilson</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -197,14 +385,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>&copy; 2025 Elysian Threads. All rights reserved.</p>
         </div>
     </footer>
-
-    <!-- Modal for Product Detail -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-body" id="modalBody"></div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
 </body>
