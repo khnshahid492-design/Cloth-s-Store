@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Elysian Threads</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .thankyou-container {
+            max-width: 700px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: slideUp 0.5s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .thankyou-header {
+            background: #7c9e7a;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .thankyou-header i {
+            font-size: 70px;
+            margin-bottom: 20px;
+            animation: bounce 0.6s ease;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .thankyou-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .thankyou-header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        .order-details {
+            padding: 40px;
+        }
+
+        .order-id-box {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 16px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 2px dashed #7c9e7a;
+        }
+
+        .order-id-box h3 {
+            color: #6c757d;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .order-id {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #7c9e7a;
+            font-family: monospace;
+            letter-spacing: 2px;
+        }
+
+        .order-summary {
+            margin-bottom: 30px;
+        }
+
+        .order-summary h3 {
+            margin-bottom: 20px;
+            color: #2d2d2d;
+            font-size: 1.3rem;
+        }
+
+        .summary-items {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .summary-item:last-child {
+            border-bottom: none;
+        }
+
+        .item-name {
+            font-weight: 500;
+        }
+
+        .item-price {
+            color: #7c9e7a;
+            font-weight: 600;
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background: #e2ede1;
+            border-radius: 16px;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .shipping-info {
+            background: #f8f9fa;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .shipping-info h3 {
+            margin-bottom: 15px;
+            color: #2d2d2d;
+            font-size: 1.1rem;
+        }
+
+        .shipping-info p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #7c9e7a;
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: #5e7c5c;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(124,158,122,0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #7c9e7a;
+            padding: 14px 32px;
+            border: 2px solid #7c9e7a;
+            border-radius: 40px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: #7c9e7a;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .thankyou-header h1 {
+                font-size: 1.8rem;
+            }
+            .order-id {
+                font-size: 1.2rem;
+            }
+            .actions {
+                flex-direction: column;
+            }
+            .btn-primary, .btn-secondary {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thankyou-container">
+        <div class="thankyou-header">
+            <i class="fas fa-check-circle"></i>
+            <h1>Thank You for Your Purchase!</h1>
+            <p>Your order has been confirmed successfully</p>
+        </div>
+        
+        <div class="order-details">
+            <div class="order-id-box">
+                <h3>Order ID</h3>
+                <div class="order-id" id="orderId">Loading...</div>
+            </div>
+            
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-items" id="orderItems">
+                    <p>Loading your order details...</p>
+                </div>
+                <div class="summary-total" id="orderTotal">
+                    <span>Total Amount</span>
+                    <span>$0.00</span>
+                </div>
+            </div>
+            
+            <div class="shipping-info">
+                <h3><i class="fas fa-truck"></i> Shipping Information</h3>
+                <p id="shippingDetails">A confirmation email has been sent to your registered email address.<br>
+                Your order will be processed within 1-2 business days.<br>
+                Estimated delivery: 5-7 business days.</p>
+            </div>
+            
+            <div class="actions">
+                <a href="index.html" class="btn-primary">
+                    <i class="fas fa-shopping-bag"></i> Continue Shopping
+                </a>
+                <button class="btn-secondary" onclick="window.print()">
+                    <i class="fas fa-print"></i> Print Receipt
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Generate random order ID
+        function generateOrderId() {
+            const prefix = 'ELYS';
+            const timestamp = Date.now().toString().slice(-6);
+            const random = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
+            return `${prefix}-${timestamp}-${random}`;
+        }
+
+        // Display order details
+        function displayOrderDetails() {
+            // Get cart data from sessionStorage
+            const cartData = sessionStorage.getItem('checkoutCart');
+            const totalAmount = sessionStorage.getItem('checkoutTotal');
+            
+            // Generate and display order ID
+            const orderId = generateOrderId();
+            document.getElementById('orderId').textContent = orderId;
+            
+            if (cartData && cartData !== '[]') {
+                const cart = JSON.parse(cartData);
+                const itemsContainer = document.getElementById('orderItems');
+                itemsContainer.innerHTML = '';
+                
+                let subtotal = 0;
+                cart.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.className = 'summary-item';
+                    itemDiv.innerHTML = `
+                        <div>
+                            <div class="item-name">${item.name}</div>
+                            <div style="font-size: 0.85rem; color: #888;">Size: ${item.size} | Quantity: ${item.qty}</div>
+                        </div>
+                        <div class="item-price">$${(item.price * item.qty).toFixed(2)}</div>
+                    `;
+                    itemsContainer.appendChild(itemDiv);
+                    subtotal += item.price * item.qty;
+                });
+                
+                // Update total
+                const totalSpan = document.getElementById('orderTotal');
+                totalSpan.innerHTML = `
+                    <span>Total Amount</span>
+                    <span>$${subtotal.toFixed(2)}</span>
+                `;
+            } else {
+                // If no cart data (direct access), show sample or redirect
+                document.getElementById('orderItems').innerHTML = `
+                    <div class="summary-item">
+                        <span>No items found</span>
+                        <span>$0.00</span>
+                    </div>
+                `;
+            }
+            
+            // Clear sessionStorage after displaying (optional)
+            // sessionStorage.removeItem('checkoutCart');
+            // sessionStorage.removeItem('checkoutTotal');
+        }
+        
+        // Auto-redirect to home if accessed directly without purchase
+        function checkValidAccess() {
+            const cartData = sessionStorage.getItem('checkoutCart');
+            if (!cartData) {
+                // If someone lands directly on thankyou.html without checkout, redirect after 5 seconds
+                setTimeout(() => {
+                    if (confirm('No recent purchase found. Would you like to go shopping?')) {
+                        window.location.href = 'index.html';
+                    }
+                }, 3000);
+            }
+        }
+        
+        // Run on page load
+        displayOrderDetails();
+        checkValidAccess();
+    </script>
+</body>
+</html>

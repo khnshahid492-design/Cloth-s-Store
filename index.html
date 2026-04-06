@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Elysian Threads | Minimalist Clothing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">ELYSIAN<span>THREADS</span></a>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#men">Men</a></li>
+                    <li><a href="#women">Women</a></li>
+                    <li><a href="#kids">Kids</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" id="closeCartBtn">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItemsList">
+            <p class="empty-cart-msg">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalPrice">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Begin Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Hero Carousel -->
+    <section class="hero" id="home">
+        <div class="carousel-container">
+            <div class="carousel-slides" id="carouselSlides">
+                <div class="slide active">
+                    <div class="slide-content">
+                        <h2>Timeless Elegance</h2>
+                        <p>Discover sustainable fashion for every moment</p>
+                        <a href="#men" class="slide-btn">Shop Now</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Effortless Style</h2>
+                        <p>Modern minimalism meets comfort</p>
+                        <a href="#women" class="slide-btn">Explore Women</a>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide-content">
+                        <h2>Little Wonders</h2>
+                        <p>Gentle fabrics for joyful kids</p>
+                        <a href="#kids" class="slide-btn">Kids Collection</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
+            <button class="carousel-btn next" id="nextBtn">&#10095;</button>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </section>
+
+    <!-- Category Showcase -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" data-cat="men">
+                    <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=500&h=600&fit=crop" alt="Men">
+                    <div class="category-overlay">
+                        <h3>Men</h3>
+                        <a href="#men" class="category-link">View Collection →</a>
+                    </div>
+                </div>
+                <div class="category-card" data-cat="women">
+                    <img src="https://images.unsplash.com/photo-1532453288672-3a27e9be9efd?w=500&h=600&fit=crop" alt="Women">
+                    <div class="category-overlay">
+                        <h3>Women</h3>
+                        <a href="#women" class="category-link">View Collection →</a>
+                    </div>
+                </div>
+                <div class="category-card" data-cat="kids">
+                    <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=500&h=600&fit=crop" alt="Kids">
+                    <div class="category-overlay">
+                        <h3>Kids</h3>
+                        <a href="#kids" class="category-link">View Collection →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Sections -->
+    <div id="men"></div>
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Men's Collection</h2>
+            <div class="product-grid" id="menProducts"></div>
+        </div>
+    </section>
+
+    <div id="women"></div>
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Women's Collection</h2>
+            <div class="product-grid" id="womenProducts"></div>
+        </div>
+    </section>
+
+    <div id="kids"></div>
+    <section class="products-section">
+        <div class="container">
+            <h2 class="section-title">Kids' Collection</h2>
+            <div class="product-grid" id="kidsProducts"></div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="reviews-grid" id="reviewsContainer"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>Elysian Threads</h4>
+                <p>Minimalist fashion for the conscious soul.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#men">Men</a></li>
+                    <li><a href="#women">Women</a></li>
+                    <li><a href="#kids">Kids</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>hello@elysianthreads.com</p>
+                <p>+1 (800) 456-7890</p>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Elysian Threads. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Modal for Product Detail -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
